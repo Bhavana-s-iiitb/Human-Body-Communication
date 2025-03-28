@@ -1,7 +1,53 @@
 # Human-Body-Communication
 <details>
   <summary>
-## Week 4 </summary>
+Introduction </summary>
+The Wired communication networks and wireless communication technologies like Wi
+Fi, Bluetooth, and Infrared communication, each capable of high-speed data transfer 
+come with limitations, such as line-of-sight constraints, high power usage, vulnerability 
+to signal interception, and lower data throughput. To address these challenges, Human 
+body communication (HBC) has emerged as a promising alternative. Computational 
+advancements has developed in such a way that energy/bit in computation has become 
+less compared to energy/bit for communication of that bit so energy/bit in communication 
+became bottleneck for implementing low power embedded systems.  
+HBC offers an alternative communication methodology for transferring data. HBC 
+eliminates for the need for wires and cables. It is also more secure and efficient compared 
+to other wireless communication technologies. As the signals are not radiating in HBC, 
+the data signals are not prone to interception. The control of data transfer is also simple as 
+the human body is the medium. So, whenever the human body comes in contact with 
+both transmitter and receiver modules the data transfer begins and as soon as this 
+connection is broken, the data transfer stops.
+
+### Working Principles of HBC 
+Human body is good conductor of electricity. Hence the human body can be used as 
+conductor to connect two nodes and enable flow of electricity and complete the circuit. 
+The communication starts as soon as the path is established between the transmitter and 
+receiver through the human body. In normal conditions the human body offers a 
+resistance of about 10,000 ohms, but it can be even greater if the person is dehydrated. 
+For the safety of the body the current should be limited to 5mA to 9mA. Also the 
+maximum voltage that the human body can safely take is 5V. 
+
+### Implementation 
+A transmitter is designed which will modulate the message signal with a carrier wave and 
+induces displacement current through the human body according to the modulated signal 
+variations and when a receiver is in contact with the human body, the circuit is closed and 
+the transmission of the signals takes place. The receiver amplifies the received signal and 
+is converted back to data using the microcontroller on the receiver end.
+
+<details>
+  <summary>
+ OOK Modulation  </summary>
+
+Baudrate: 100Kbits per second (generated using CyDelay function) 
+Carrier Frequency: 1MHz (generated using PWM) 
+i/p clock frequency = 12 MHz 
+Period count = 12, which generates square wave of 1MHz frequency. 
+The PWM is used to generate the carrier wave (square wave) of required frequency. 
+When the data to be transmitted is ‘1’, carrier wave should be generated hence, PWM is 
+enabled. When the data is ‘0’ PWM is disabled hence, 0V is passed.
+<details>
+  <summary>
+ Week 4 </summary>
 
 ### Demodulation on Receiver PSoC with carrier of Transmitter PSoC
 Transmitter PSoC:
