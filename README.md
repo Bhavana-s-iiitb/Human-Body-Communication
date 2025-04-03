@@ -34,17 +34,44 @@ variations and when a receiver is in contact with the human body, the circuit is
 the transmission of the signals takes place. The receiver amplifies the received signal and 
 is converted back to data using the microcontroller on the receiver end.
 
+</details>
+
 <details>
   <summary>
  OOK Modulation  </summary>
+  
+### Why Modulation?
+Modulating the message signal before transmitting has several advantages:
+<br>
+1. Reduces intereference while sending the message data over long distance as low frequency signals are more prone to interferences.
+<br>
+Baudrate: 100 bits per second
+<br> 
+Carrier Frequency: 10 KHz (generated using PWM)
+<br>
+Two PWMs are used on the transmitter PSoC , one for generating Message signal and the other to generate carrier signal.
+The output of these two PWMs are given as input to Mixer so as to obtain the product of message and carrier signals. This product signal represents the OOK modulated signal.
+<br>
+OOK Modulation is a type of AM modulation in which the modulated wave is the product of message and carrier wave. The output is carrier if the input message is bit '1', else zero. Hence, OOK is considered as digital modulation technique.
+<br>
 
-Baudrate: 100Kbits per second (generated using CyDelay function) 
-Carrier Frequency: 1MHz (generated using PWM) 
-i/p clock frequency = 12 MHz 
-Period count = 12, which generates square wave of 1MHz frequency. 
-The PWM is used to generate the carrier wave (square wave) of required frequency. 
-When the data to be transmitted is ‘1’, carrier wave should be generated hence, PWM is 
-enabled. When the data is ‘0’ PWM is disabled hence, 0V is passed.
+![image](https://github.com/user-attachments/assets/9e752135-c999-42b6-9a54-de41d4890d4b)
+
+<br>
+
+### OOK Modulation on PSoC:
+TopDesign in PSoC
+Fc = 1KHz
+<br>
+Fm = 100Hz
+<br>
+
+![image](https://github.com/user-attachments/assets/12017742-960f-48f2-bad1-66a626abaaab)
+
+<br>
+Oscilloscope waveform of modulated signal:
+<br>
+
 <details>
   <summary>
     Demodulation on same PSoC </summary>
@@ -55,6 +82,8 @@ Fc = 10KHz
 ### Conclusion:
   Perfect Demodulation without any loss.
   
+</details>
+
 <details>
   <summary>
  Week 4 </summary>
