@@ -45,6 +45,13 @@ Modulating the message signal before transmitting has several advantages:
 <br>
 1. Reduces intereference while sending the message data over long distance as low frequency signals are more prone to interferences.
 <br>
+
+OOK Modulation is a type of AM modulation in which the modulated wave is the product of message and carrier wave. The output is carrier if the input message is bit '1', else zero. Hence, OOK is considered as digital modulation technique.
+<br>
+
+![image](https://github.com/user-attachments/assets/9e752135-c999-42b6-9a54-de41d4890d4b)
+
+<br>
 Baudrate: 100 bits per second
 <br> 
 Carrier Frequency: 10 KHz (generated using PWM)
@@ -52,12 +59,7 @@ Carrier Frequency: 10 KHz (generated using PWM)
 Two PWMs are used on the transmitter PSoC , one for generating Message signal and the other to generate carrier signal.
 The output of these two PWMs are given as input to Mixer so as to obtain the product of message and carrier signals. This product signal represents the OOK modulated signal.
 <br>
-OOK Modulation is a type of AM modulation in which the modulated wave is the product of message and carrier wave. The output is carrier if the input message is bit '1', else zero. Hence, OOK is considered as digital modulation technique.
-<br>
 
-![image](https://github.com/user-attachments/assets/9e752135-c999-42b6-9a54-de41d4890d4b)
-
-<br>
 
 ### OOK Modulation on PSoC:
 TopDesign in PSoC <br>
@@ -79,9 +81,16 @@ Oscilloscope waveform of modulated signal:
 Fc = 10KHz
 </b>
   Fm = 100Hz
- ![Screenshot 2025-03-28 143639](https://github.com/user-attachments/assets/619d0f6e-b418-40e7-a177-7bb1a8057c6f)
-### Conclusion:
-  Perfect Demodulation without any loss.
+
+  ![image](https://github.com/user-attachments/assets/abe094c0-8948-46ee-862a-c268679a7dfb)
+<br>
+First Waveform: Modulated signal taken from the Transmitter PSoC and given as input to the receiver PSoC.
+<br>
+Second wave: Demodulated Signal, output of th eMixer in the receiver PSoC.
+<br>
+Note: Mixer has been configured as Sample(down) Mixer.
+  ### Conclusion:
+  Perfect Demodulation without any loss and the frequency of demodulated signal is matching with the frequency of the message at transmitter.
   
 </details>
 
