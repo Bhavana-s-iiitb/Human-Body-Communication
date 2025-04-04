@@ -147,7 +147,7 @@ int main(void)
 
 <details>
   <summary>
-    Demodulation on Receiver PSoC
+   <strong> Modulation and Demodulation on two different PSoCs</strong>
   </summary>
   
  ### PSoC Top design and configuration
@@ -166,6 +166,7 @@ There has been loss of data after few cycles. This is because of the accumulatio
 <br>
 The carriers generated at the transmitter side and the receiver side doesnot match in terms of phase.
 But this phase difference is getting accumulated over time and when the phase difference exceeds T/2, the output of the mixer goes to zero. This is called Phase drift.
+
  ### Phase Drift
  The unwanted change or deviation in the phase of the signal over time is called phase drift. This can be caused by factors like temperature variations, component aging, or noise. 
  <br>
@@ -186,7 +187,7 @@ To solve phase drift problems in communication systems, real-time phase drift co
 
 <details>
   <summary>
-  Demodulation with higher carrier Frequency </summary>
+ <strong> Demodulation with higher carrier Frequency</strong> </summary>
 In this experiment, I have choosen 10KHz as carrier frequency on the transmitter side PSoC and 50KHz square wave is used in the receiver PSoC.
   <br>
   The Mixer at the receiver as two inputs:
@@ -194,6 +195,7 @@ In this experiment, I have choosen 10KHz as carrier frequency on the transmitter
   1. Modulated wave with Fm = 1KHz and Fc = 10 KHz
   2. Local Carrier wave whose frequency is 50 KHz.
 <br>
+  
   ![image](https://github.com/user-attachments/assets/1255b6f3-a630-4ad9-9f99-0de8e7da78bd)
 
 <br>
@@ -205,39 +207,3 @@ In this experiment, I have choosen 10KHz as carrier frequency on the transmitter
 
 </details>
 
-### PSoC Implementation of AM Modulation and Demodulation
-The message signal and carrier signal are
-multiplied by mixer
-<br>
-The Voltage DAC (VDAC) provides offset to the message signal m(t).
-<br>
-Modulation index can be defined as the
-measure of extent of amplitude variation about a unmodulated carrier. The modulation index is an important factor.
-When a level of modulation is too low, the modulation does not utilize the carrier efficiently and if a level of modulation
-is too high, the carrier can become over modulated causing sidebands to extend out beyond the allowed bandwidth
-causing interference to other users. 
-##### Demodulation
-![image](https://github.com/user-attachments/assets/a2d95b6f-d763-4f20-966d-aaeeff9fff54)
-![image](https://github.com/user-attachments/assets/121c1132-0f3c-4664-b493-1563ec50dae9)
-![Uploading image.png…]()
-
-<br>
-
-The AM signal is given to comparator whose reference is AGND. The output of the comparator is square wave with
-frequency same as the carrier frequency of AM signal. The output of the comparator is used as a LO signal for the
-mixer. The mixer type is set to Down Mixer (or Sample Mixer).The Down Mixer gives a gain close to ‘1’ (when the
-signal is sampled at peaks) for the down converted signal. The Down Mixer output has lower harmonic content than
-up mixer when the input signal and LO signal have near same frequencies. The Mixer samples the input AM signal at
-the rising edges of the LO as shown in following figure.
-
-![image](https://github.com/user-attachments/assets/333da9e0-c562-4847-8686-ce864b89f585)
-
-<br>
-
-The comparator output delay plays
-an important role in the demodulation. The ideal delay that gives maximum output is quarter period (90°) of the
-carrier. See Figure 18. When the delay is 90°, the mixer samples the AM wave at the peaks. A delay lesser than 90°
-still gives a demodulated output; however, the amplitude level is reduced. The comparator typical delay is 90 ns. This
-delay makes the mixer sample the AM wave within 45° to 135° from the zero crossing for the frequency range
-1.25 MHz to 4 MHz. If the signal frequency is out of this range then, either external delay circuit should be added on
-the signal before giving it to ZCD or the signal should be brought within the range before demodulating it.
