@@ -40,7 +40,7 @@ is converted back to data using the microcontroller on the receiver end.
   <summary>
  OOK Modulation  </summary>
   
-### Why Modulation?
+## Why Modulation?
 Modulating the message signal before transmitting has several advantages:
 <br>
 1. Reduces intereference while sending the message data over long distance as low frequency signals are more prone to interferences.
@@ -60,7 +60,8 @@ OOK Modulation is a type of AM modulation in which the modulated wave is the pro
 <br>
 
 ### OOK Modulation on PSoC:
-TopDesign in PSoC
+TopDesign in PSoC <br>
+
 Fc = 1KHz
 <br>
 Fm = 100Hz
