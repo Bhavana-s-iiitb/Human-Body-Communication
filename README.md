@@ -74,7 +74,7 @@ Fm = 100Hz
 <br>
 Oscilloscope waveform of modulated signal:
 <br>
-
+</details>
 <details>
   <summary>
     Demodulation on same PSoC </summary>
@@ -142,6 +142,7 @@ int main(void)
 ```
 
 #### Demodulation
+</details>
 
 <details>
   <summary>
@@ -169,8 +170,7 @@ To solve phase drift problems in communication systems, real-time phase drift co
  
 </details>
 
-
-    <details>
+<details>
   <summary>
    Quadrature Demodulation  </summary>
 
@@ -180,7 +180,26 @@ To solve phase drift problems in communication systems, real-time phase drift co
 
 </details>
 
+<details>
+  <summary>
+  Demodulation with higher carrier Frequency </summary>
+In this experiment, I have choosen 10KHz as carrier frequency on the transmitter side PSoC and 50KHz square wave is used in the receiver PSoC.
+  <br>
+  The Mixer at the receiver as two inputs:
+  <br>
+  1. Modulated wave with Fm = 1KHz and Fc = 10 KHz
+  2. Local Carrier wave whose frequency is 50 KHz.
+<br>
+  ![image](https://github.com/user-attachments/assets/1255b6f3-a630-4ad9-9f99-0de8e7da78bd)
 
+<br>
+
+### Output Waveform:
+<br>
+
+![image](https://github.com/user-attachments/assets/8cb10129-98ef-4b1e-aac6-ea75734a6e43)
+
+</details>
 
 ### PSoC Implementation of AM Modulation and Demodulation
 The message signal and carrier signal are
