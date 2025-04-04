@@ -77,11 +77,13 @@ Oscilloscope waveform of modulated signal:
 <details>
   <summary>
    <strong> Modulation and Demodulation on single PSoC</strong> </summary>
+  
 Fc = 10KHz
-</b>
+<br>
   Fm = 100Hz
 
   <br>
+  
   ![image](https://github.com/user-attachments/assets/53e652ac-559d-41de-a04c-81ea8e901b8e)
 
 <br>
