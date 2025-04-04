@@ -174,7 +174,26 @@ In this experiment, I have choosen 10KHz as carrier frequency on the transmitter
 
 ![image](https://github.com/user-attachments/assets/8cb10129-98ef-4b1e-aac6-ea75734a6e43)
 
+<br>
+ The output waveform taken as .csv file and the outpiut signal was passed through a lowpass filter on matlab. the obtained plot in matlab after low pass filtering is given below, which is nothing but the message signal with same frequency.
+ <br>
+
+ ```
+data = readtable('C:\bhavana hbc\scope_0.csv');  % Read Excel file
+plot(data.Var2)
+data1 = data.Var2
+wpass = 0.10;
+fs = 1e3;
+x = lowpass(data1,wpass,fs);
+plot(x)
+
+```
+
+![image](https://github.com/user-attachments/assets/a63d60d9-f415-4537-98f7-b5b75536711a)
+
+
 </details>
+
 
 <details>
   <summary>
