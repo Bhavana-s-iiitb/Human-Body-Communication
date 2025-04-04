@@ -82,16 +82,33 @@ Fc = 10KHz
 </b>
   Fm = 100Hz
 
-  ![image](https://github.com/user-attachments/assets/abe094c0-8948-46ee-862a-c268679a7dfb)
+  <br>
+  ![image](https://github.com/user-attachments/assets/53e652ac-559d-41de-a04c-81ea8e901b8e)
+
 <br>
-First Waveform: Modulated signal taken from the Transmitter PSoC and given as input to the receiver PSoC.
+
+![image](https://github.com/user-attachments/assets/ac033707-4ac3-4059-9f80-5e54bd4da040)
+
 <br>
-Second wave: Demodulated Signal, output of th eMixer in the receiver PSoC.
+First Waveform: Modulated signal taken from the ouput of 1st Mixer and given as input to the 2nd Mixer within the same PSoC.
+<br>
+Second waveform: Demodulated Signal, output of the second Mixer.
 <br>
 Note: Mixer has been configured as Sample(down) Mixer.
+<br>
+
   ### Conclusion:
   Perfect Demodulation without any loss and the frequency of demodulated signal is matching with the frequency of the message at transmitter.
-  
+
+  ### Mixer Component
+PSoC Creator provides a “Mixer” component. It can be used for frequency conversion of an input signal using a local
+oscillator (LO) signal as the sampling clock. 
+<br>
+The Mixer component can be configured in two
+configurations:
+1. Up Mixer:  Multiplies the input signal with LO.
+2. Down Mixer: Operates as a sample and hold circuit on the input signal.
+
 </details>
 
 <details>
@@ -123,16 +140,45 @@ int main(void)
     }
 }
 ```
-##### Mixer Component
-PSoC Creator provides a “Mixer” component. It can be used for frequency conversion of an input signal using a local
-oscillator (LO) signal as the sampling clock. 
-<br>
-The Mixer component can be configured in two
-configurations:
-1. Up Mixer:  Multiplies the input signal with LO.
-2. Down Mixer: Operates as a sample and hold circuit on the input signal.
 
 #### Demodulation
+
+<details>
+  <summary>
+    Demodulation on Receiver PSoC
+  </summary>
+  
+ ### PSoC Top design and configuration
+   ![image](https://github.com/user-attachments/assets/13210977-104a-4785-b805-65eba7507c51)
+   <br>
+Output Waveform:
+<br>
+![image](https://github.com/user-attachments/assets/87d8467f-a9ee-4751-92a1-d19a80421d98)
+<br>
+Inference:
+<br>
+There has been loss of data after few cycles. This is because of the accumulation of Phase missmatch.
+<br>
+The carriers generated at the transmitter side and the receiver side doesnot match in terms of phase.
+But this phase difference is getting accumulated over time and when the phase difference exceeds T/2, the output of the mixer goes to zero. This is called Phase drift.
+ ### Phase Drift
+ The unwanted change or deviation in the phase of the signal over time is called phase drift. This can be caused by factors like temperature variations, component aging, or noise. 
+ <br>
+ <br>
+To solve phase drift problems in communication systems, real-time phase drift compensation schemes can be implemented or optimize phase shifts in reconfigurable intelligent surfaces (RIS) can be implemented. 
+ 
+</details>
+
+
+    <details>
+  <summary>
+   Quadrature Demodulation  </summary>
+
+    ### PSoC Top design and configuration
+    
+  ![image](https://github.com/user-attachments/assets/e48b2d5a-aea4-45f5-8690-b43eab36a785)
+
+</details>
 
 
 
