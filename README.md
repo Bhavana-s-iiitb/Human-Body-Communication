@@ -63,12 +63,12 @@ The output of these two PWMs are given as input to Mixer so as to obtain the pro
 ### OOK Modulation on PSoC:
 TopDesign in PSoC <br>
 
-Fc = 1KHz
+Fc = 10 KHz
 <br>
 Fm = 100Hz
 <br>
 
-![image](https://github.com/user-attachments/assets/12017742-960f-48f2-bad1-66a626abaaab)
+![image](https://github.com/user-attachments/assets/cf1ae00a-5702-44fd-8e26-f23157053975)
 
 <br>
 Oscilloscope waveform of modulated signal:
