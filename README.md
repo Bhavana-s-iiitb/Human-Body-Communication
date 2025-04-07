@@ -197,8 +197,6 @@ plot(x)
 
 ```
 
-![image](https://github.com/user-attachments/assets/a63d60d9-f415-4537-98f7-b5b75536711a)
-
 
 </details>
 
