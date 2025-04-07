@@ -161,18 +161,26 @@ In this experiment, I have choosen 10KHz as carrier frequency on the transmitter
   <br>
   The Mixer at the receiver as two inputs:
   <br>
-  1. Modulated wave with Fm = 1KHz and Fc = 10 KHz <br>
-  2. Local Carrier wave whose frequency is 50 KHz.
+  1. Modulated wave with Fm = 100 Hz and Fc = 1 KHz <br>
+  2. Local Carrier wave whose frequency is 2 KHz.
 <br>
   
-  ![image](https://github.com/user-attachments/assets/1255b6f3-a630-4ad9-9f99-0de8e7da78bd)
+ ![WhatsApp Image 2025-04-04 at 8 39 42 PM](https://github.com/user-attachments/assets/14a95472-eef2-4b66-8c7c-a70594011b39)
 
 <br>
 
 ### Output Waveform:
+
+#### Input Waveform to matlab
+
+![image](https://github.com/user-attachments/assets/15bc08c6-7ed8-492d-b1de-93113552681c)
+
 <br>
 
-![image](https://github.com/user-attachments/assets/8cb10129-98ef-4b1e-aac6-ea75734a6e43)
+#### Output Waveform after LPF
+
+![image](https://github.com/user-attachments/assets/c9c9d59c-cdbc-4364-b6c2-1aa6694229d9)
+
 
 <br>
  The output waveform taken as .csv file and the outpiut signal was passed through a lowpass filter on matlab. the obtained plot in matlab after low pass filtering is given below, which is nothing but the message signal with same frequency.
