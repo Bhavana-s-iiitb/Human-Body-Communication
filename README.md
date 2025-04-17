@@ -148,10 +148,41 @@ To solve phase drift problems in communication systems, real-time phase drift co
   <summary>
   <strong> Quadrature Demodulation </strong>  </summary>
 
-    ### PSoC Top design and configuration
+  ### PSoC Top design and configuration
+
     
   ![image](https://github.com/user-attachments/assets/e48b2d5a-aea4-45f5-8690-b43eab36a785)
 
+#### Message Signal
+
+![Screenshot from 2025-04-17 09-54-52](https://github.com/user-attachments/assets/77eed7d0-a55e-4953-acf2-380502f69065)
+
+![image](https://github.com/user-attachments/assets/a9ea2c1b-e7d5-4736-a7a9-50edc6b74eec)
+
+### Frequency Spectrum of message signal
+
+![image](https://github.com/user-attachments/assets/62db77b9-fd66-4c9e-b3b4-70210ec14aae)
+
+### PicoScope Waveforms
+Channel A: Message Signal
+<br>
+D0: Modulated Signal
+<br>
+D1: Carrier Signal 1
+<br>
+D2: Carrier Signal 2 (90' Phase shifted)
+<br>
+D3: In-Phase Component
+<br>
+D4: Quadrature Component
+<br>
+![image](https://github.com/user-attachments/assets/47df152a-4109-4d10-a34a-ce7c418e7559)
+
+### Phase Drift
+
+![image](https://github.com/user-attachments/assets/839a59c5-fc9a-4f12-abf4-c30de906af0c)
+
+The In-Phase component goes to Zero due to phase drift, whereas the Quadrature component is retained. 
 </details>
 
 <details>
